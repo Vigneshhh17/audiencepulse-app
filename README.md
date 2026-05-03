@@ -14,37 +14,7 @@ One line summary — plain English description of the video based purely on what
 
 
 # How it works
-User pastes YouTube URL
-        │
-        ▼
-┌─────────────────┐
-│   Frontend      │  React + Vite (Vercel)
-│  AudiencePulse  │  User enters URL → clicks Analyze
-└────────┬────────┘
-         │ GET request
-         ▼
-┌─────────────────┐
-│   n8n Webhook   │  Receives URL
-│   (Railway)     │  Extracts video ID
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  YouTube Data   │  Fetches top 100 comments
-│    API v3       │  via Google Cloud API
-└────────┬────────┘
-         │ Raw comment data
-         ▼
-┌─────────────────┐
-│   Groq API      │  LLaMA 3.3 70B analyzes comments
-│  LLaMA 3.3 70B  │  Returns structured JSON insights
-└────────┬────────┘
-         │ JSON response
-         ▼
-┌─────────────────┐
-│   Frontend      │  Displays sentiment bars,
-│   Dashboard     │  scores, insights and summary
-└─────────────────┘
+<img width="3424" height="3204" alt="image" src="https://github.com/user-attachments/assets/423a2506-d436-42fe-b40c-cd6661c4a497" />
 
 # Tech Stack
 LayerTechnologyFrontendReact, Vite, TailwindCSSAutomationn8n (self-hosted on Railway)DataYouTube Data API v3AIGroq API — LLaMA 3.3 70BHostingVercel (frontend) + Railway (backend)
