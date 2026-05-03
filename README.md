@@ -1,9 +1,9 @@
-#AudiencePulse 
+# AudiencePulse 
 Paste a YouTube link. Understand your audience in seconds.
 
 🔗 Live Demo: audiencepulse-app.vercel.app
 
-#What it does
+# What it does
 AudiencePulse analyzes the top 100 comments from any YouTube video and returns:
 
 Sentiment breakdown — positive, negative and neutral percentages
@@ -13,7 +13,7 @@ Questions people asked — top 3 unanswered questions in the comments
 One line summary — plain English description of the video based purely on what commenters said
 
 
-#How it works
+# How it works
 User pastes YouTube URL
         │
         ▼
@@ -46,7 +46,7 @@ User pastes YouTube URL
 │   Dashboard     │  scores, insights and summary
 └─────────────────┘
 
-#Tech Stack
+# Tech Stack
 LayerTechnologyFrontendReact, Vite, TailwindCSSAutomationn8n (self-hosted on Railway)DataYouTube Data API v3AIGroq API — LLaMA 3.3 70BHostingVercel (frontend) + Railway (backend)
 
 Local Setup
@@ -62,7 +62,7 @@ Groq API key → console.groq.com
 n8n instance (local or Railway)
 
 
-#n8n Workflow
+# n8n Workflow
 The automation pipeline consists of 5 nodes:
 
 Webhook — receives GET request with YouTube URL
@@ -72,7 +72,7 @@ Groq AI — sends comments to LLaMA 3.3 70B for analysis
 Respond to Webhook — returns clean JSON to frontend
 
 
-#Results Example
+# Results Example
 json{
   "sentiment_score": 97,
   "positive_percent": 85,
